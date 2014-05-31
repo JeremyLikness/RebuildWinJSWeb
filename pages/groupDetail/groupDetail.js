@@ -3,7 +3,7 @@
 
     var ui = WinJS.UI, session = WinJS.Application.sessionState;
 
-    ui.Pages.define("/pages/groupDetail/groupDetail.html", {
+    ui.Pages.define("/RebuildWinJSWeb/pages/groupDetail/groupDetail.html", {
         /// <field type="WinJS.Binding.List" />
         _items: null,
 
@@ -39,7 +39,7 @@
 
         _itemInvoked: function (args) {
             var item = this._items.getAt(args.detail.itemIndex);
-            WinJS.Navigation.navigate("/pages/itemDetail/itemDetail.html", { item: Data.getItemReference(item) });
+            WinJS.Navigation.navigate("/RebuildWinJSWeb/pages/itemDetail/itemDetail.html", { item: Data.getItemReference(item) });
         }
     });
 })();
