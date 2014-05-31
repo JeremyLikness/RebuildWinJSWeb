@@ -5,7 +5,7 @@
         ui = WinJS.UI,
         session = WinJS.Application.sessionState;
 
-    ui.Pages.define("/pages/groupedItems/groupedItems.html", {
+    ui.Pages.define("/RebuildWinJSWeb/pages/groupedItems/groupedItems.html", {
         // This function is called to initialize the page.
         init: function (element, options) {
             this.groupHeaderInvoked = ui.eventHandler(this._groupHeaderInvoked.bind(this));
@@ -31,19 +31,19 @@
             // navigating 
             (function (group) {
                 setTimeout(function () {
-                    nav.navigate("/pages/groupDetail/groupDetail.html", { groupKey: group.key });
+                    nav.navigate("/RebuildWinJSWeb/pages/groupDetail/groupDetail.html", { groupKey: group.key });
                 }, 0);
             })(group);            
         },
 
         _groupHeaderInvoked: function (args) {
             var group = Data.groups.getAt(args.detail.groupHeaderIndex);
-            nav.navigate("/pages/groupDetail/groupDetail.html", { groupKey: group.key });
+            nav.navigate("/RebuildWinJSWeb/pages/groupDetail/groupDetail.html", { groupKey: group.key });
         },
 
         _itemInvoked: function (args) {
             var item = Data.items.getAt(args.detail.itemIndex);
-            nav.navigate("/pages/itemDetail/itemDetail.html", { item: Data.getItemReference(item) });
+            nav.navigate("/RebuildWinJSWeb/pages/itemDetail/itemDetail.html", { item: Data.getItemReference(item) });
         }
     });
 })();
