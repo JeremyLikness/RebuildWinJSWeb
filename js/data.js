@@ -187,7 +187,7 @@
                 group: slideGroups[3], title: "SemanticZoom and JumpList", subtitle: "Faster ways to navigate data", slide: 'slide15.html',
                 description: 'Use semantic zoom and jump lists to navigate long lists.',
                 backgroundImage: 'images/thumbs/thumb15.png'
-            }
+            },
             {
                 group: slideGroups[3], title: "SemanticZoom Source", subtitle: "Source for SemanticZoom", slide: 'slide16.html',
                 description: 'Source code to set up SemanticZoom.',
