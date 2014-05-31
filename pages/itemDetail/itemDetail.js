@@ -4,9 +4,9 @@
     var nav = WinJS.Navigation,
         ui = WinJS.UI,
         session = WinJS.Application.sessionState,
-        goHome = function () { nav.navigate("/pages/groupedItems/groupedItems.html", {}) };
+        goHome = function () { nav.navigate("/RebuildWinJSWeb/pages/groupedItems/groupedItems.html", {}) };
     
-    WinJS.UI.Pages.define("/pages/itemDetail/itemDetail.html", {        
+    WinJS.UI.Pages.define("/RebuildWinJSWeb/pages/itemDetail/itemDetail.html", {        
 
         currentSlide: null,
 
@@ -104,13 +104,13 @@
 
         _advanceSlide: function () {
             if (session.nextItem) {
-                nav.navigate("/pages/itemDetail/itemDetail.html", { item: session.nextItem });
+                nav.navigate("/RebuildWinJSWeb/pages/itemDetail/itemDetail.html", { item: session.nextItem });
             }
         },
 
         _revertSlide: function () {
             if (session.previousItem) {
-                nav.navigate("/pages/itemDetail/itemDetail.html", { item: session.previousItem });
+                nav.navigate("/RebuildWinJSWeb/pages/itemDetail/itemDetail.html", { item: session.previousItem });
             }
         }
     });
