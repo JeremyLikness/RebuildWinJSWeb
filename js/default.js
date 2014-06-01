@@ -15,6 +15,14 @@
         // Optimize the load of the application and while the splash screen is shown, execute high priority scheduled work.
         ui.disableAnimations();
         var p = ui.processAll().then(function () {
+
+            var advance = function () {
+                app.queueEvent({ type: 'keyUpTriggered', keyCode: 39, handled: false });
+            };
+
+            document.body.addEventListener("pointerup", advance, false);
+            document.body.addEventListener("touchend", advance, false);            
+
             document.body.onkeyup = function (e) {
                 WinJS.Application.queueEvent({ type: 'keyUpTriggered', keyCode: e.keyCode, handled: false });
             };

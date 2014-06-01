@@ -23,23 +23,12 @@
                 previousButton = element.querySelector("#previousSlide"),
                 slideContainer = element.querySelector("#slideContainer"),
                 currentSlideText = element.querySelector("#curSlide"),
-                bottomNavigation = element.querySelector("#bottomNavigation"),
                 homeCmd = element.querySelector("#cmdHome");
 
             session.nextItem = Data.getNextItem(options.item);
             session.previousItem = Data.getPreviousItem(options.item);
 
             homeCmd.addEventListener("click", goHome, false);
-
-            bottomNavigation.onmouseenter = function () {
-                nextButton.className = "align-right animated fadeIn";
-                previousButton.className = "animated fadeIn";
-            };
-
-            bottomNavigation.onmouseleave = function () {
-                nextButton.className = "align-right animated fadeOut";
-                previousButton.className = "animated fadeOut";
-            };
 
             element.querySelector(".titlearea .pagetitle").textContent = item.title;
 
