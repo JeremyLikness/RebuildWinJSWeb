@@ -1,5 +1,6 @@
 RebuildWinJSWeb
 ===============
+![No longer maintained](https://img.shields.io/maintenance/no/2020)
 
 Port of the [RebuildWinJS Windows Store app](https://github.com/JeremyLikness/RebuildWinJS) to a web app.
 
